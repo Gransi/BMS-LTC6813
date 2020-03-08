@@ -82,12 +82,12 @@ $EndComp
 $Comp
 L power:VPP #PWR03
 U 1 1 5E42E243
-P 8550 4400
-F 0 "#PWR03" H 8550 4250 50  0001 C CNN
-F 1 "VPP" H 8565 4573 50  0000 C CNN
-F 2 "" H 8550 4400 50  0001 C CNN
-F 3 "" H 8550 4400 50  0001 C CNN
-	1    8550 4400
+P 3700 1200
+F 0 "#PWR03" H 3700 1050 50  0001 C CNN
+F 1 "VPP" H 3715 1373 50  0000 C CNN
+F 2 "" H 3700 1200 50  0001 C CNN
+F 3 "" H 3700 1200 50  0001 C CNN
+	1    3700 1200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2280,7 +2280,7 @@ Wire Wire Line
 	4300 900  4300 1350
 Connection ~ 4300 1350
 Wire Wire Line
-	4300 1350 3500 1350
+	4300 1350 4000 1350
 Wire Wire Line
 	5150 900  5150 700 
 Wire Wire Line
@@ -2321,10 +2321,6 @@ F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS758-Datasheet.ashx?
 	1    11100 2000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	10800 7200 13950 7200
-Wire Wire Line
-	13950 7200 13950 2800
 Wire Wire Line
 	13950 2800 11100 2800
 Wire Wire Line
@@ -2474,9 +2470,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 6050 8700 6050
 Wire Wire Line
-	15000 1650 15000 7300
-Wire Wire Line
-	15000 7300 10800 7300
+	15000 1650 15000 7200
 Wire Wire Line
 	11700 3650 11700 3800
 $Comp
@@ -2552,12 +2546,12 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x01_Male J3
 U 1 1 5E67770D
-P 10650 1450
-F 0 "J3" H 10758 1631 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10758 1540 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 10650 1450 50  0001 C CNN
-F 3 "~" H 10650 1450 50  0001 C CNN
-	1    10650 1450
+P 10450 1450
+F 0 "J3" H 10558 1631 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 10558 1540 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 10450 1450 50  0001 C CNN
+F 3 "~" H 10450 1450 50  0001 C CNN
+	1    10450 1450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2582,8 +2576,6 @@ F 3 "~" H 15700 800 50  0001 C CNN
 	1    15700 800 
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	10850 1450 11000 1450
 Wire Wire Line
 	11000 1450 11000 1600
 $Comp
@@ -2702,42 +2694,56 @@ F 3 "" H 11450 1850 50  0001 C CNN
 	1    11450 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8400 4550 8550 4550
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5EEBA562
-P 8650 4050
-F 0 "#FLG01" H 8650 4125 50  0001 C CNN
-F 1 "PWR_FLAG" H 8650 4223 50  0000 C CNN
-F 2 "" H 8650 4050 50  0001 C CNN
-F 3 "~" H 8650 4050 50  0001 C CNN
-	1    8650 4050
+P 4000 1200
+F 0 "#FLG01" H 4000 1275 50  0001 C CNN
+F 1 "PWR_FLAG" H 4000 1373 50  0000 C CNN
+F 2 "" H 4000 1200 50  0001 C CNN
+F 3 "~" H 4000 1200 50  0001 C CNN
+	1    4000 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4300 900  4800 900 
-Wire Wire Line
-	8550 4400 8550 4550
-Connection ~ 8550 4550
-Wire Wire Line
-	8550 4550 8650 4550
-Wire Wire Line
-	8650 4050 8650 4550
-Connection ~ 8650 4550
-Wire Wire Line
-	8650 4550 8700 4550
 $Comp
 L Device:R R63
 U 1 1 5E45713F
 P 12400 5350
 F 0 "R63" V 12193 5350 50  0000 C CNN
 F 1 "R" V 12284 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 12330 5350 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 12330 5350 50  0001 C CNN
 F 3 "~" H 12400 5350 50  0001 C CNN
 	1    12400 5350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	12950 1450 13500 1450
+Wire Wire Line
+	13950 7300 10800 7300
+Wire Wire Line
+	13950 2800 13950 7300
+Wire Wire Line
+	10800 7200 15000 7200
+Wire Wire Line
+	10650 1450 10750 1450
+Wire Wire Line
+	10750 1450 10750 2000
+Connection ~ 10750 1450
+Wire Wire Line
+	10750 1450 11000 1450
+Connection ~ 10750 2000
+Wire Wire Line
+	8400 4550 8700 4550
+Wire Wire Line
+	4000 1200 4000 1350
+Connection ~ 4000 1350
+Wire Wire Line
+	4000 1350 3700 1350
+Wire Wire Line
+	3700 1200 3700 1350
+Connection ~ 3700 1350
+Wire Wire Line
+	3700 1350 3500 1350
 $EndSCHEMATC

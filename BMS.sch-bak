@@ -214,17 +214,6 @@ Wire Wire Line
 Wire Wire Line
 	11300 5300 11300 5550
 $Comp
-L Device:R R63
-U 1 1 5E45713F
-P 12400 5350
-F 0 "R63" V 12193 5350 50  0000 C CNN
-F 1 "4k7" V 12284 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 12330 5350 50  0001 C CNN
-F 3 "~" H 12400 5350 50  0001 C CNN
-	1    12400 5350
-	0    1    1    0   
-$EndComp
-$Comp
 L power:VCC #PWR021
 U 1 1 5E4581B1
 P 12600 5300
@@ -2333,33 +2322,9 @@ F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS758-Datasheet.ashx?
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	10800 7200 13950 7200
-Wire Wire Line
-	13950 7200 13950 2800
-Wire Wire Line
 	13950 2800 11100 2800
 Wire Wire Line
 	11100 2800 11100 2400
-$Comp
-L Diode:C5D50065D D1
-U 1 1 5E712BA5
-P 13400 1450
-F 0 "D1" H 13400 1134 50  0000 C CNN
-F 1 "C5D50065D" H 13400 1225 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-247-3_Vertical" H 13400 1275 50  0001 C CNN
-F 3 "https://www.wolfspeed.com/media/downloads/111/C5D50065D.pdf" H 13400 1450 50  0001 C CNN
-	1    13400 1450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	13600 1350 13750 1350
-Wire Wire Line
-	13750 1350 13750 1450
-Wire Wire Line
-	13750 1550 13600 1550
-Connection ~ 13750 1450
-Wire Wire Line
-	13750 1450 13750 1550
 Wire Wire Line
 	11850 1450 11200 1450
 Wire Wire Line
@@ -2371,8 +2336,6 @@ Wire Wire Line
 Wire Wire Line
 	12400 1450 12550 1450
 Connection ~ 12400 1450
-Wire Wire Line
-	12950 1450 13200 1450
 $Comp
 L Sensor_Current:ACS758xCB-150B-PSS U3
 U 1 1 5E9B0A08
@@ -2507,9 +2470,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 6050 8700 6050
 Wire Wire Line
-	15000 1650 15000 7300
-Wire Wire Line
-	15000 7300 10800 7300
+	15000 1650 15000 7200
 Wire Wire Line
 	11700 3650 11700 3800
 $Comp
@@ -2585,23 +2546,23 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x01_Male J3
 U 1 1 5E67770D
-P 10650 1450
-F 0 "J3" H 10758 1631 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10758 1540 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 10650 1450 50  0001 C CNN
-F 3 "~" H 10650 1450 50  0001 C CNN
-	1    10650 1450
+P 10450 1450
+F 0 "J3" H 10558 1631 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 10558 1540 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 10450 1450 50  0001 C CNN
+F 3 "~" H 10450 1450 50  0001 C CNN
+	1    10450 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Male J8
 U 1 1 5E67882E
-P 14050 1450
-F 0 "J8" H 14022 1382 50  0000 R CNN
-F 1 "Conn_01x01_Male" H 14022 1473 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 14050 1450 50  0001 C CNN
-F 3 "~" H 14050 1450 50  0001 C CNN
-	1    14050 1450
+P 13700 1450
+F 0 "J8" H 13672 1382 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 13672 1473 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 13700 1450 50  0001 C CNN
+F 3 "~" H 13700 1450 50  0001 C CNN
+	1    13700 1450
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -2615,10 +2576,6 @@ F 3 "~" H 15700 800 50  0001 C CNN
 	1    15700 800 
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	13750 1450 13850 1450
-Wire Wire Line
-	10850 1450 11000 1450
 Wire Wire Line
 	11000 1450 11000 1600
 $Comp
@@ -2762,4 +2719,31 @@ Wire Wire Line
 Connection ~ 8650 4550
 Wire Wire Line
 	8650 4550 8700 4550
+$Comp
+L Device:R R63
+U 1 1 5E45713F
+P 12400 5350
+F 0 "R63" V 12193 5350 50  0000 C CNN
+F 1 "R" V 12284 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 12330 5350 50  0001 C CNN
+F 3 "~" H 12400 5350 50  0001 C CNN
+	1    12400 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12950 1450 13500 1450
+Wire Wire Line
+	13950 7300 10800 7300
+Wire Wire Line
+	13950 2800 13950 7300
+Wire Wire Line
+	10800 7200 15000 7200
+Wire Wire Line
+	10650 1450 10750 1450
+Wire Wire Line
+	10750 1450 10750 2000
+Connection ~ 10750 1450
+Wire Wire Line
+	10750 1450 11000 1450
+Connection ~ 10750 2000
 $EndSCHEMATC
